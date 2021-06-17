@@ -18,8 +18,12 @@ export class SidebarService {
     { titulo: 'Dashboard Alumno', icono: 'fa fa-tachometer-alt', sub: false, url: '/alu/dashboard'},
   ];
   menuProfesor: sidebarItem[]=[
-    { titulo: 'Dashboard Profesor', icono: 'fa fa-tachometer-alt', sub: false, url: '/prof/dashboard'},
-    { titulo: 'Asignaturas - Items', icono: 'fa fa-copy', sub: false, url: '/prof/asignaturas'},
+    { titulo: 'Muro', icono: 'fas fa-home', sub: false, url: '/prof/dashboard'},
+    { titulo: 'Actividades', icono: 'fas fa-folder-open', sub: false, url: '/prof/asignaturas'},
+    { titulo: 'Mesajería', icono: 'fas fa-comments', sub: false, url: '/prof/dashboard'},
+    { titulo: 'Clases', icono: 'fas fa-users-class', sub: false, url: '/prof/asignaturas'},
+    { titulo: 'Perfil', icono: 'fas fa-user-circle', sub: false, url: '/perfil'},
+    { titulo: 'Salir', icono: 'fas fa-sign-out-alt', sub: false}
   ];
   none: sidebarItem[]=[
     { titulo: 'error', icono: 'fa fa-exclamation-triangle', sub: false, url: '/error'}
@@ -27,7 +31,7 @@ export class SidebarService {
   constructor( private usuarioService: UsuarioService) { }
 
   getmenu() {
-    
+
     switch (this.usuarioService.rol) {
       case 'ROL_ADMIN':
         return this.menuAdmin;
@@ -38,5 +42,9 @@ export class SidebarService {
     }
 
     return this.none;
+  }
+
+  logout() {
+    this.usuarioService.logout();
   }
 }

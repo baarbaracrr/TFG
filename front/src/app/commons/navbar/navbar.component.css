@@ -1,0 +1,18 @@
+.logo {
+    width: 8vh;
+}
+
+nav {
+    background-color: #008ccb !important;
+}
+
+.section-nav {
+    color: white !important;
+    font-weight: 500;
+    font-size: 2.5vh;
+}
+
+#burger {
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 0.4rem #4a4a4a;
+}
