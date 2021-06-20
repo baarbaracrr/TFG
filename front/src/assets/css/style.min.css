@@ -10596,7 +10596,7 @@ html[dir=ltr] body .p-l-0 {
 }
 
 .page-wrapper {
-    background: #eeeeee;
+    background: #ffffff;
     position: relative;
     margin-left: 0;
 }
@@ -16076,4 +16076,31 @@ label {
 
 .micursor {
     cursor: pointer;
+}
+
+
+/*********************************************************************************STYLE SCROLL*/
+
+
+/* Works on Firefox */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+}
+
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: #e6e6e6;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #c9c9c9;
+    border-radius: 20px;
 }

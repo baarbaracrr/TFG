@@ -14,7 +14,7 @@ import { ItemService } from '../../../services/item.service';
   templateUrl: './asignaturasprof.component.html',
   styleUrls: ['./asignaturasprof.component.css']
 })
-export class AsignaturasprofComponent implements OnInit {
+export class AsignaturasprofComponent implements OnInit, OnDestroy {
 
   // Control de paginación
   public totalregistros: number = 0;
@@ -48,6 +48,14 @@ export class AsignaturasprofComponent implements OnInit {
       .subscribe( event => {
         this.cargarAsignaturas();
       });
+      document.getElementById('nav-part2').style.fontWeight = '800';
+      document.getElementById('nav-part2').style.textDecoration = 'underline';
+    }
+
+  ngOnDestroy(): void {
+    this.subs$.unsubscribe();
+    document.getElementById('nav-part2').style.fontWeight = '';
+    document.getElementById('nav-part2').style.textDecoration = '';
   }
 
   borrar() {
@@ -73,7 +81,7 @@ export class AsignaturasprofComponent implements OnInit {
         }
       });
 
-    
+
   }
 
   cargarCursos() {
@@ -83,15 +91,11 @@ export class AsignaturasprofComponent implements OnInit {
         this.cursos = res['cursos'];
       });
   }
-  
+
   cambiarPagina( pagina: number) {
     pagina = (pagina < 0 ? 0 : pagina);
     this.registroactual = ((pagina - 1) * this.registrosporpagina >=0 ? (pagina - 1) * this.registrosporpagina : 0);
     this.cargarAsignaturas();
-  }
-
-  ngOnDestroy() {
-    this.subs$.unsubscribe();
   }
 
 

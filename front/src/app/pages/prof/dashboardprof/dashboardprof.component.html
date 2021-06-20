@@ -1,29 +1,196 @@
-<div>
-    <form action="">
-        <div class="form-group">
+<a id="returnhere">
+    <p></p>
+</a>
+
+<button id="new-post" type="button" class="btn animate__animated animate__pulse" (click)="showForm()"><i class="far fa-plus-square"></i></button>
+
+<div id="post-form" class="form-post animate__animated animate__backInRight" style="display: none;">
+    <form action="" class="row">
+        <div class="form-group col-sm-6 col-12">
             <label for="title-post">Titulo</label>
-            <input type="text" class="form-control" id="input-title" placeholder="Título">
-        </div>
+            <input type="text" class="form-control" id="input-title" placeholder="...">
 
-        <div class="form-group">
             <label for="mensaje-post">Mensaje</label>
-            <textarea class="form-control" id="input-mensaje" rows="3"></textarea>
+            <textarea class="form-control" id="input-mensaje" rows="3" placeholder="..."></textarea>
         </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
+        <div class="form-group col-sm-6 col-12">
+            <label for="formFile" class="form-label">Archivo</label>
+            <input class="form-control" type="file" id="formFile">
+            <p>* Solamente un archivo por publicación</p>
+        </div>
+
+        <div class="form-group col-12 row">
+            <label class="form-label">Destinatarios</label>
+            <div class="col-sm-3 col-12">
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Alumn@s 2ºA 2020</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Alumn@s 3ºB 2020</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Alumn@s 1ºA 2019</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Todos los alumnos</label>
                 </div>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox">
-        </div>
-
-        <div class="input-group">
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile04">
-                <label class="custom-file-label" for="inputGroupFile04">Subir archivo</label>
+            <div class="col-sm-3 col-12">
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Tutores 2ºA 2020</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Tutores 3ºB 2020</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Tutores 1ºA 2019</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Todos los tutores</label>
+                </div>
             </div>
         </div>
+
+        <div class="text-end">
+            <button class="btn btn-light mr-2" (click)="showForm()">Cancelar</button>
+            <button type="submit" class="btn btn-post" (click)="showForm()">Publicar <i class="fas fa-paper-plane"></i></button>
+        </div>
+
     </form>
 </div>
+<div id="fondo"></div>
+<div class="container mt-5 mb-5">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-9">
+            <div class="card">
+                <div class="d-flex justify-content-between p-2 px-3">
+                    <div class="d-flex flex-row align-items-center"> <img [src]="imagenUrl" width="50" class="rounded-circle">
+                        <div class="d-flex flex-column ml-2"> <span class="font-weight-bold" [textContent]="name"></span> <small class="text-primary">Yo</small> </div>
+                    </div>
+                    <div class="d-flex flex-row mt-1 ellipsis"> <small class="mr-2">2 mins</small> <i class="fas fa-trash-alt"></i> </div>
+                </div>
+                <div class="p-2">
+                    <p class="text-justify">Hola chicos, acordaros que mañana tenéis que llavar a clase una cartulina del color que queráis. Un saludo!
+                    </p>
+                    <hr>
+                </div>
+            </div>
+            <div class="card">
+                <div class="d-flex justify-content-between p-2 px-3">
+                    <div class="d-flex flex-row align-items-center"> <img src="../../../../assets/images/users/alumna1.jpg" width="50" class="rounded-circle">
+                        <div class="d-flex flex-column ml-2"> <span class="font-weight-bold"> Sara Navarro Santander</span> <small class="text-primary">@sarans1</small> </div>
+                    </div>
+                    <div class="d-flex flex-row mt-1 ellipsis"> <small class="mr-2">20 mins</small></div>
+                </div>
+                <div class="p-2">
+                    <p class="text-justify">Sara ha subido una actividad nueva.</p>
+                    <hr>
+                </div>
+                <img src="../../../../assets/images/original/kid-painting-santa-on-paper-plate.jpg" class="img-fluid">
+                <button type="button" class="btn btn-success animate__animated animate__pulse" [routerLink]="['/prof/actividades']">Ver <i class="fas fa-eye"></i></button>
+            </div>
+            <div class="card">
+                <div class="d-flex justify-content-between p-2 px-3">
+                    <div class="d-flex flex-row align-items-center"> <img [src]="imagenUrl" width="50" class="rounded-circle">
+                        <div class="d-flex flex-column ml-2"> <span class="font-weight-bold" [textContent]="name"></span> <small class="text-primary">Yo</small> </div>
+                    </div>
+                    <div class="d-flex flex-row mt-1 ellipsis"> <small class="mr-2">30 mins</small> <i class="fas fa-trash-alt"></i> </div>
+                </div>
+                <div class="p-2">
+                    <p class="text-justify">Se ha creado una nueva entrega llamada "Investigacion margaritas".
+                    </p>
+                    <hr>
+                </div>
+                <button type="button" class="btn btn-success animate__animated animate__pulse" [routerLink]="['/prof/actividades']">Ver <i class="fas fa-eye"></i></button>
+            </div>
+            <div class="card">
+                <div class="d-flex justify-content-between p-2 px-3">
+                    <div class="d-flex flex-row align-items-center"> <img [src]="imagenUrl" width="50" class="rounded-circle">
+                        <div class="d-flex flex-column ml-2"> <span class="font-weight-bold" [textContent]="name"></span> <small class="text-primary">Yo</small> </div>
+                    </div>
+                    <div class="d-flex flex-row mt-1 ellipsis"> <small class="mr-2">1 hr</small> <i class="fas fa-trash-alt"></i> </div>
+                </div>
+                <div class="p-2">
+                    <p class="text-justify">Has subido una actividad de la alumna Sandra Hernández dentro del portafolio de Arte.</p>
+                    <hr>
+                </div>
+                <img src="../../../../assets/images/svg/crayons.svg" class="img-fluid" style="background-color: rgb(151, 108, 67);">
+                <button type="button" class="btn btn-success animate__animated animate__pulse" [routerLink]="['/prof/actividades']">Ver <i class="fas fa-eye"></i></button>
+            </div>
+            <div class="card">
+                <div class="d-flex justify-content-between p-2 px-3">
+                    <div class="d-flex flex-row align-items-center"> <img src="../../../../assets/images/users/alumno.jpg" width="50" class="rounded-circle">
+                        <div class="d-flex flex-column ml-2"> <span class="font-weight-bold"> Pablo Lozano Perez</span> <small class="text-primary">@pablolp2</small> </div>
+                    </div>
+                    <div class="d-flex flex-row mt-1 ellipsis"> <small class="mr-2">1 hr</small></div>
+                </div>
+                <div class="p-2">
+                    <p class="text-justify">Pablo ha subido una actividad nueva adjunta a la entrega "Tarea Lunes"</p>
+                    <hr>
+                </div>
+                <img src="../../../../assets/images/original/homework.jpg" class="img-fluid">
+                <button type="button" class="btn btn-success animate__animated animate__pulse" [routerLink]="['/prof/actividades']">Ver <i class="fas fa-eye"></i></button>
+            </div>
+            <div class="card">
+                <div class="d-flex justify-content-between p-2 px-3">
+                    <div class="d-flex flex-row align-items-center"> <img [src]="imagenUrl" width="50" class="rounded-circle">
+                        <div class="d-flex flex-column ml-2"> <span class="font-weight-bold" [textContent]="name"></span> <small class="text-primary">Yo</small> </div>
+                    </div>
+                    <div class="d-flex flex-row mt-1 ellipsis"> <small class="mr-2">1:30 hr</small> <i class="fas fa-trash-alt"></i> </div>
+                </div>
+                <div class="p-2">
+                    <p class="text-justify">Has subido una actividad del alumno Pablo Lozano.</p>
+                    <hr>
+                </div>
+                <embed src="../../../../assets/pdf/prueba.pdf" />
+                <button type="button" class="btn btn-success animate__animated animate__pulse" [routerLink]="['/prof/actividades']">Ver <i class="fas fa-eye"></i></button>
+            </div>
+            <div class="card">
+                <div class="d-flex justify-content-between p-2 px-3">
+                    <div class="d-flex flex-row align-items-center"> <img [src]="imagenUrl" width="50" class="rounded-circle">
+                        <div class="d-flex flex-column ml-2"> <span class="font-weight-bold" [textContent]="name"></span> <small class="text-primary">Yo</small> </div>
+                    </div>
+                    <div class="d-flex flex-row mt-1 ellipsis"> <small class="mr-2">2 hrs</small> <i class="fas fa-trash-alt"></i> </div>
+                </div>
+                <div class="p-2">
+                    <p class="text-justify">Has subido una actividad del alumno Andrés Romero adjuntada a la entrega de Teatro presentación.</p>
+                    <hr>
+                </div>
+                <audio controls style="width: 100%;">
+                  <source src="../../../../assets/audio/WhatsApp Ptt 2021-06-20 at 11.22.57.ogg" type="audio/ogg">
+                  <source src="../../../../assets/audio/audio-m.mp4" type="audio/mp4">
+                  Tu navegador no soporta el elemento audio.
+                </audio>
+                <button type="button" class="btn btn-success animate__animated animate__pulse" [routerLink]="['/prof/actividades']">Ver <i class="fas fa-eye"></i></button>
+            </div>
+            <div class="card">
+                <div class="d-flex justify-content-between p-2 px-3">
+                    <div class="d-flex flex-row align-items-center"> <img [src]="imagenUrl" width="50" class="rounded-circle">
+                        <div class="d-flex flex-column ml-2"> <span class="font-weight-bold" [textContent]="name"></span> <small class="text-primary">Yo</small> </div>
+                    </div>
+                    <div class="d-flex flex-row mt-1 ellipsis"> <small class="mr-2">2:15 hrs</small> <i class="fas fa-trash-alt"></i> </div>
+                </div>
+                <div class="p-2">
+                    <p class="text-justify">Has subido una actividad del alumno Andrés Romero adjuntada a la entrega de Teatro presentación.</p>
+                    <hr>
+                </div>
+                <video muted controls>
+                  <source src="../../../../assets/video/Moony - Opera 2021-05-26 19-39-48.mp4" type="video/mp4">
+                  Tu navegador no soporta el elemento video.
+                </video>
+                <button type="button" class="btn btn-success animate__animated animate__pulse" [routerLink]="['/prof/actividades']">Ver <i class="fas fa-eye"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="#returnhere"><button id="up-muro" type="button" class="btn animate__animated animate__pulse"><i class="fas fa-chevron-up"></i></button></a>

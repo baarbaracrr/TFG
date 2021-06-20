@@ -8,6 +8,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SelectusersComponent } from './selectusers/selectusers.component';
+import { ListClassesComponent } from './list-classes/list-classes.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SelectusersComponent } from './selectusers/selectusers.component';
     PaginationComponent,
     ProgressbarComponent,
     SelectusersComponent,
+    ListClassesComponent,
 
   ],
   exports: [

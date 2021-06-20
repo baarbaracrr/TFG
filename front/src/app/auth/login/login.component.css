@@ -1,0 +1,29 @@
+.logo {
+    width: 15vh;
+}
+
+.color-blue {
+    background-color: #4FA9EB;
+}
+
+.color-orange {
+    background-color: #FFA800;
+}
+
+.color-green {
+    background-color: #44C4A1;
+}
+
+.white-font {
+    color: white;
+}
+
+.loginform-style {
+    background-color: white;
+    padding: 1.5rem;
+    border: 1px solid #cecece;
+    box-shadow: 0rem 0rem 0.5rem #585858;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 10%;
+}

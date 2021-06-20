@@ -1,0 +1,163 @@
+.card {
+    background-color: #fafafa;
+    padding: 1rem;
+}
+
+#new-post {
+    /*border-radius: 100%;*/
+    background-color: #44C4A1;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    position: fixed;
+    right: 1rem;
+    top: 6rem;
+    z-index: 3;
+}
+
+#new-post>i {
+    font-size: 2rem;
+}
+
+.form-post {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    position: fixed;
+    z-index: 2;
+    right: 1.5rem;
+    top: 6.5rem;
+    border: 0.1rem solid #d2d2d2;
+    margin-left: 1rem;
+}
+
+@media (max-width: 576px) {
+    #post-form {
+        overflow-y: scroll;
+        height: 84%;
+    }
+}
+
+#fondo {
+    background: #111111a6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.btn-post {
+    background-color: #27a9e3;
+    color: white;
+    width: 14vh;
+}
+
+.btn-file {
+    background-color: #eaeaea;
+    color: #767676;
+}
+
+
+/*PDF*/
+
+embed {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/*BUTTON UP*/
+
+#up-muro {
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    background-color: #ffa70a;
+    color: white;
+    border-radius: 50%;
+    display: none;
+}
+
+
+/*********************************************************************POST*/
+
+.card {
+    border: none
+}
+
+.ellipsis {
+    color: #a09c9c
+}
+
+hr {
+    color: #a09c9c;
+    margin-top: 4px;
+    margin-bottom: 8px
+}
+
+.muted-color {
+    color: #a09c9c;
+    font-size: 13px
+}
+
+.ellipsis i {
+    margin-top: 3px;
+    cursor: pointer
+}
+
+.icons i {
+    font-size: 25px
+}
+
+.icons .fa-heart {
+    color: red
+}
+
+.icons .fa-smile-o {
+    color: yellow;
+    font-size: 29px
+}
+
+.rounded-image {
+    border-radius: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px
+}
+
+.name {
+    font-weight: 600
+}
+
+.comment-text {
+    font-size: 12px
+}
+
+.status small {
+    margin-right: 10px;
+    color: blue
+}
+
+.comment-input {
+    position: relative
+}
+
+.fonts {
+    position: absolute;
+    right: 13px;
+    top: 8px;
+    color: #a09c9c
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #8bbafe;
+    outline: 0;
+    box-shadow: none
+}
