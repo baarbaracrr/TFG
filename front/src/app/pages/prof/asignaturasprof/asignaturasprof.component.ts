@@ -50,7 +50,7 @@ export class AsignaturasprofComponent implements OnInit, OnDestroy {
       });
       document.getElementById('nav-part2').style.fontWeight = '800';
       document.getElementById('nav-part2').style.textDecoration = 'underline';
-    }
+  }
 
   ngOnDestroy(): void {
     this.subs$.unsubscribe();
@@ -80,8 +80,6 @@ export class AsignaturasprofComponent implements OnInit, OnDestroy {
             });
         }
       });
-
-
   }
 
   cargarCursos() {
@@ -97,6 +95,5 @@ export class AsignaturasprofComponent implements OnInit, OnDestroy {
     this.registroactual = ((pagina - 1) * this.registrosporpagina >=0 ? (pagina - 1) * this.registrosporpagina : 0);
     this.cargarAsignaturas();
   }
-
 
 }

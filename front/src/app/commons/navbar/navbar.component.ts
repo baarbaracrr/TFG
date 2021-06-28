@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
@@ -6,11 +7,12 @@ import { UsuarioService } from '../../services/usuario.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
 
   imagenUrl: string = '';
 
-  constructor( private usuarioService: UsuarioService) { }
+  constructor( private usuarioService: UsuarioService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.usuarioService.cargarUsuario( this.usuarioService.uid )
@@ -21,5 +23,8 @@ export class NavbarComponent implements OnInit {
 
   logout() {
     this.usuarioService.logout();
+  }
+
+  ngOnDestroy(): void{
   }
 }

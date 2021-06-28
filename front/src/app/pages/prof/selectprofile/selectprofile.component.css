@@ -1,0 +1,18 @@
+.card {
+    width: 18rem;
+    box-shadow: 2px 2px 6px #b6b6b6;
+}
+
+.card-body {
+    background-color: #ececec;
+    margin-top: 1rem;
+}
+
+.card-button {
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+#content-targets {
+    margin-top: 10%;
+}

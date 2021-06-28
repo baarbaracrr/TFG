@@ -13,8 +13,7 @@ export class DashboardprofComponent implements OnInit, OnDestroy {
   name: String = '';
   private sform = false;
 
-  constructor(private usuarioService: UsuarioService,
-              private router: Router) { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
     this.usuarioService.cargarUsuario( this.usuarioService.uid )

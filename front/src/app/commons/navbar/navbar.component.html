@@ -106,7 +106,7 @@
 <!-- ============================================================== -->
 
 <nav id="nav-prin" class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" [routerLink]="['/prof/alumnos']">
         <img src="../../../assets/images/logo.png" alt="PostClass" class="logo">
         <img src="../../../assets/images/text.png" alt="PostClass" class="logo">
     </a>
@@ -117,7 +117,7 @@
         <div class="navbar-nav">
             <a id="nav-part1" class="nav-item nav-link section-nav" [routerLink]="['/prof/muro']">Muro <i class="fas fa-home"></i></a>
             <a id="nav-part2" class="nav-item nav-link section-nav" [routerLink]="['/prof/actividades']">Actividades <i class="fas fa-folder"></i></a>
-            <a id="nav-part3" class="nav-item nav-link section-nav" href="#">Mensajería <i class="fas fa-comment"></i></a>
+            <a id="nav-part3" class="nav-item nav-link section-nav" [routerLink]="['/prof/mensajes']">Mensajería <i class="fas fa-comment"></i></a>
             <a id="nav-part4" class="nav-item nav-link section-nav" href="#">Clases <i class="fas fa-chalkboard-teacher"></i></a>
             <a id="nav-part5" class="nav-item nav-link section-nav" routerLink="/perfil">Perfil <i class="fas fa-user-circle"></i></a>
             <a id="nav-part6" class="nav-item nav-link section-nav" href="#" (click)="logout()">Salir <i class="fa fa-power-off"></i></a>

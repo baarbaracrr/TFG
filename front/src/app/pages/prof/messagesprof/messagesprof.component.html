@@ -1,0 +1,312 @@
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-lg-12">
+            <div class="card chat-app">
+                <div id="plist" class="people-list">
+                    <div class="mb-3"><button class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter" type="submit">Nuevo chat <i class="fas fa-plus"></i></button></div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Buscar...">
+                    </div>
+                    <ul class="list-unstyled chat-list mt-2 mb-0">
+                        <li class="clearfix">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Vincente Perez</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 7 mins </div>
+                            </div>
+                        </li>
+                        <li class="clearfix active">
+                            <img src="../../../../assets/images/background/img4.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Aiden Chavez</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Miguel Serrano</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Christian García</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="../../../../assets/images/users/alumna1.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Monica Buendia</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="../../../../assets/images/users/alumna2.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Daniela Romero</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat">
+                    <div class="chat-header clearfix">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                    <img src="../../../../assets/images/background/img4.jpg" alt="avatar">
+                                </a>
+                                <div class="chat-about">
+                                    <h6 class="m-b-0">Aiden Chavez</h6>
+                                    <small>Visto hace 2 hrs</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-history">
+                        <ul class="m-b-0">
+                            <li class="clearfix">
+                                <div class="message-data text-right">
+                                    <span class="message-data-time">10:10 AM, hoy</span>
+                                    <img [src]="imagenUrl" alt="avatar">
+                                </div>
+                                <div class="message other-message float-right"> Hola Aiden, recuerda que mañana tu hijo Pablo tiene que llevar los deberes de mates </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="message-data">
+                                    <span class="message-data-time">10:12 AM, hoy</span>
+                                    <img src="../../../../assets/images/background/img4.jpg" alt="avatar">
+                                </div>
+                                <div class="message my-message">Gracias por recordármelo!</div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="message-data text-right">
+                                    <span class="message-data-time">10:10 AM, hoy</span>
+                                    <img [src]="imagenUrl" alt="avatar">
+                                </div>
+                                <div class="message other-message float-right"> No hay que darlas! Nos vemos mañana en la reunión </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chat-message clearfix">
+                        <div class="input-group mb-0">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-paper-plane"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Escribir aquí...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Nueva conversación</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body d-flex">
+                <div id="plist-alumnos" class="people-list">
+                    <label for="">Alumnos</label>
+                    <ul class="list-unstyled chat-list mt-2 mb-0" style="max-height: 20rem; overflow-y: scroll;">
+                        <li #user1 class="clearfix" (click)="newChat(user1);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Vincente Perez</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 7 mins </div>
+                            </div>
+                        </li>
+                        <li #user2 class="clearfix" (click)="newChat(user2);">
+                            <img src="../../../../assets/images/background/img4.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Aiden Chavez</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user3 class="clearfix" (click)="newChat(user3);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Miguel Serrano</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user4 class="clearfix" (click)="newChat(user4);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Christian García</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                        <li #user5 class="clearfix" (click)="newChat(user5);">
+                            <img src="../../../../assets/images/users/alumna1.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Monica Buendia</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user6 class="clearfix" (click)="newChat(user6);">
+                            <img src="../../../../assets/images/users/alumna2.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Daniela Romero</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                        <li #user7 class="clearfix" (click)="newChat(user7);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Vincente Perez</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 7 mins </div>
+                            </div>
+                        </li>
+                        <li #user8 class="clearfix" (click)="newChat(user8);">
+                            <img src="../../../../assets/images/background/img4.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Aiden Chavez</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user9 class="clearfix" (click)="newChat(user9);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Miguel Serrano</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user10 class="clearfix" (click)="newChat(user10);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Christian García</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                        <li #user11 class="clearfix" (click)="newChat(user11);">
+                            <img src="../../../../assets/images/users/alumna1.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Monica Buendia</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user12 class="clearfix" (click)="newChat(user12);">
+                            <img src="../../../../assets/images/users/alumna2.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Daniela Romero</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="plist-tutores" class="people-list">
+                    <label for="">Tutores</label>
+                    <ul class="list-unstyled chat-list mt-2 mb-0" style="max-height: 20rem; overflow-y: scroll;">
+                        <li #user13 class="clearfix" (click)="newChat(user13);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Vincente Perez</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 7 mins </div>
+                            </div>
+                        </li>
+                        <li #user14 class="clearfix" (click)="newChat(user14);">
+                            <img src="../../../../assets/images/background/img4.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Aiden Chavez</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user15 class="clearfix" (click)="newChat(user15);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Miguel Serrano</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user16 class="clearfix" (click)="newChat(user16);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Christian García</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                        <li #user17 class="clearfix" (click)="newChat(user17);">
+                            <img src="../../../../assets/images/users/alumna1.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Monica Buendia</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user18 class="clearfix" (click)="newChat(user18);">
+                            <img src="../../../../assets/images/users/alumna2.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Daniela Romero</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                        <li #user19 class="clearfix" (click)="newChat(user19);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Vincente Perez</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 7 mins </div>
+                            </div>
+                        </li>
+                        <li #user20 class="clearfix" (click)="newChat(user20);">
+                            <img src="../../../../assets/images/background/img4.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Aiden Chavez</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user21 class="clearfix" (click)="newChat(user21);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Miguel Serrano</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user22 class="clearfix" (click)="newChat(user22);">
+                            <img src="../../../../assets/images/users/alumno.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Christian García</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                        <li #user23 class="clearfix" (click)="newChat(user23);">
+                            <img src="../../../../assets/images/users/alumna1.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Monica Buendia</div>
+                                <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                            </div>
+                        </li>
+                        <li #user24 class="clearfix" (click)="newChat(user24);">
+                            <img src="../../../../assets/images/users/alumna2.jpg" alt="avatar">
+                            <div class="about">
+                                <div class="name">Daniela Romero</div>
+                                <div class="status"> <i class="fa fa-circle offline"></i> 10 hrs </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="people-list">
+                    <ul id="chat-selected" class="list-unstyled chat-list mt-2 mb-0">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Vale</button>
+            </div>
+        </div>
+    </div>
+</div>

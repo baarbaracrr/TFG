@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
             this.router.navigateByUrl('/alu/dashboard');
             break;
           case 'ROL_PROFESOR':
-            this.router.navigateByUrl('/prof/dashboard');
+            this.router.navigateByUrl('/prof/alumnos');
             break;
         }
 

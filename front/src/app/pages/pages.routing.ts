@@ -16,6 +16,8 @@ import { AsignaturaComponent } from './admin/asignatura/asignatura.component';
 import { GruposComponent } from './admin/grupos/grupos.component';
 import { GrupoComponent } from './admin/grupo/grupo.component';
 import { AsignaturasprofComponent } from './prof/asignaturasprof/asignaturasprof.component';
+import { MessagesprofComponent } from './prof/messagesprof/messagesprof.component';
+import { SelectprofileComponent } from './prof/selectprofile/selectprofile.component';
 
 /*
   /perfil                               [*]
@@ -88,6 +90,11 @@ const routes: Routes = [
 
   { path: 'prof', component: AdminLayoutComponent, canActivate: [ AuthGuard ], data: {rol: 'ROL_PROFESOR'},
     children: [
+    { path: 'alumnos', component: SelectprofileComponent, canActivate: [ AuthGuard ], data: {
+                                                        rol: 'ROL_PROFESOR',
+                                                        titulo: 'Dashboard Profesor',
+                                                        breadcrums: []
+                                                      },},
     { path: 'muro', component: DashboardprofComponent, canActivate: [ AuthGuard ], data: {
                                                         rol: 'ROL_PROFESOR',
                                                         titulo: 'Dashboard Profesor',
@@ -95,7 +102,12 @@ const routes: Routes = [
                                                       },},
     { path: 'actividades', component: AsignaturasprofComponent, canActivate: [ AuthGuard ], data: {
                                                         rol: 'ROL_PROFESOR',
-                                                        titulo: 'Asignaturas - Items',
+                                                        titulo: 'Actividades',
+                                                        breadcrums: [ ],
+                                                      },},
+    { path: 'mensajes', component: MessagesprofComponent, canActivate: [ AuthGuard ], data: {
+                                                        rol: 'ROL_PROFESOR',
+                                                        titulo: 'Mensajes',
                                                         breadcrums: [ ],
                                                       },},
     { path: '**', redirectTo: 'dashboard'}
