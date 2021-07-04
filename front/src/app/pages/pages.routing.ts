@@ -18,6 +18,8 @@ import { GrupoComponent } from './admin/grupo/grupo.component';
 import { AsignaturasprofComponent } from './prof/asignaturasprof/asignaturasprof.component';
 import { MessagesprofComponent } from './prof/messagesprof/messagesprof.component';
 import { SelectprofileComponent } from './prof/selectprofile/selectprofile.component';
+import { SeeportafolioComponent } from './prof/seeportafolio/seeportafolio.component';
+import { ClasesComponent } from './prof/clases/clases.component';
 
 /*
   /perfil                               [*]
@@ -104,12 +106,22 @@ const routes: Routes = [
                                                         rol: 'ROL_PROFESOR',
                                                         titulo: 'Actividades',
                                                         breadcrums: [ ],
-                                                      },},
+                                                      },},                                                   
     { path: 'mensajes', component: MessagesprofComponent, canActivate: [ AuthGuard ], data: {
                                                         rol: 'ROL_PROFESOR',
                                                         titulo: 'Mensajes',
                                                         breadcrums: [ ],
                                                       },},
+    { path: 'portafolio', component: SeeportafolioComponent, canActivate: [ AuthGuard ], data: {
+                                                        rol: 'ROL_PROFESOR',
+                                                        titulo: 'Portafolio',
+                                                        breadcrums: [ ],
+                                                      },},  
+    { path: 'clases', component: ClasesComponent, canActivate: [ AuthGuard ], data: {
+                                                        rol: 'ROL_PROFESOR',
+                                                        titulo: 'Clases',
+                                                        breadcrums: [ ],
+                                                      },},                                                         
     { path: '**', redirectTo: 'dashboard'}
   ]},
 

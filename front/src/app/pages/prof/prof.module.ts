@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DragulaModule } from 'ng2-dragula';
 import { MessagesprofComponent } from './messagesprof/messagesprof.component';
 import { SelectprofileComponent } from './selectprofile/selectprofile.component';
+import { SeeportafolioComponent } from './seeportafolio/seeportafolio.component';
+import { ClasesComponent } from './clases/clases.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { SelectprofileComponent } from './selectprofile/selectprofile.component'
     AsignaturasprofComponent,
     MessagesprofComponent,
     SelectprofileComponent,
+    SeeportafolioComponent,
+    ClasesComponent,
   ],
   exports: [
     DashboardprofComponent

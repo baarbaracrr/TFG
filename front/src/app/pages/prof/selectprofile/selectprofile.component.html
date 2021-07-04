@@ -3,7 +3,10 @@
         <img src="../../../../assets/images/original/pila-de-libros.png" alt="" class="card-image-top">
         <div class="card-body">
             <h5 class="card-title">2ºA 2020</h5>
-            <div class="text-end"><a class="btn btn-success" [routerLink]="['/prof/muro']">Entrar</a></div>
+            <div class="row">
+                <div class="text-right col-5"><a class="btn btn-link" [routerLink]="['/prof/clases']">Editar</a></div>
+                <div class="text-end col-5"><a class="btn btn-success" [routerLink]="['/prof/muro']">Entrar</a></div>
+            </div>
         </div>
     </div>
 
@@ -11,7 +14,10 @@
         <img src="../../../../assets/images/original/pila-de-libros.png" alt="" class="card-image-top">
         <div class="card-body">
             <h5 class="card-title">3ºB 2020</h5>
-            <div class="text-end"><a class="btn btn-success" [routerLink]="['/prof/muro']">Entrar</a></div>
+            <div class="row">
+                <div class="text-right col-5"><a class="btn btn-link" [routerLink]="['/prof/clases']">Editar</a></div>
+                <div class="text-end col-5"><a class="btn btn-success" [routerLink]="['/prof/muro']">Entrar</a></div>
+            </div>
         </div>
     </div>
 
@@ -19,7 +25,40 @@
         <img src="../../../../assets/images/original/pila-de-libros.png" alt="" class="card-image-top">
         <div class="card-body">
             <h5 class="card-title">1ºA 2019</h5>
-            <div class="text-end"><a class="btn btn-success" [routerLink]="['/prof/muro']">Entrar</a></div>
+            <div class="row">
+                <div class="text-right col-5"><a class="btn btn-link" [routerLink]="['/prof/clases']">Editar</a></div>
+                <div class="text-end col-5"><a class="btn btn-success" [routerLink]="['/prof/muro']">Entrar</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mr-2 col-12 col-sm-4 addclass" data-toggle="modal" data-target="#exampleModalCenter">
+        <img src="../../../../assets/images/icons/plus.png" alt="" class="card-image-top" title="nueva clase">
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Nueva clase</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-chalkboard-teacher"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Nombre clase" aria-label="Nombre clase" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Crear</button>
+            </div>
         </div>
     </div>
 </div>

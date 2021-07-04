@@ -1,3 +1,43 @@
 .obj-act {
-    width: 25%;
+    width: 100%;
+}
+
+.card {
+    background-color: #f6f6f6 !important;
+}
+
+.icons {
+    right: 0;
+    top: -0.7rem;
+}
+
+.icons>a>img {
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px #b0b0b0;
+    width: 1.8rem;
+}
+
+.cursorhover:hover {
+    cursor: pointer;
+}
+
+.list-alumnos {
+    position: absolute;
+    z-index: 1;
+    box-shadow: 3px 3px 4px grey;
+    max-height: 20rem;
+    overflow-y: scroll;
+}
+
+.list-alumnos>a:hover {
+    cursor: pointer;
+}
+
+.profile-act {
+    width: 2rem;
+    border-radius: 50%;
+}
+
+#lista-alumnos {
+    display: none;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.css']
 })
-export class PerfilComponent implements OnInit {
+export class PerfilComponent implements OnInit, OnDestroy {
 
   public imagenUrl = '';
   public foto: File = null;
@@ -40,6 +40,13 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarUsuario();
+    document.getElementById('nav-part4').style.fontWeight = '800';
+    document.getElementById('nav-part4').style.textDecoration = 'underline';
+  }
+
+  ngOnDestroy(): void {
+    document.getElementById('nav-part4').style.fontWeight = '';
+    document.getElementById('nav-part4').style.textDecoration = '';
   }
 
   // Actualizar password
@@ -89,7 +96,7 @@ export class PerfilComponent implements OnInit {
       const errtext = err.error.msg || 'No se pudo guardar los datos';
       Swal.fire({icon: 'error', title: 'Oops...', text: errtext});
     });
-  }  
+  }
 
   // Precargar la imagen en la vista
   cambioImagen( evento ): void {
@@ -113,9 +120,9 @@ export class PerfilComponent implements OnInit {
       // cargamos el archivo en la variable foto que servirá para enviarla al servidor
       this.foto = evento.target.files[0];
       // leemos el archivo desde el dispositivo
-      reader.readAsDataURL(evento.target.files[0]); 
+      reader.readAsDataURL(evento.target.files[0]);
       // y cargamos el archivo en la imagenUrl que es lo que se inserta en el src de la imagen
-      reader.onload = (event) => { 
+      reader.onload = (event) => {
         this.imagenUrl = event.target.result.toString();
         this.fileText = nombre;
       };

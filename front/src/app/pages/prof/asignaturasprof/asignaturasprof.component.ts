@@ -35,6 +35,8 @@ export class AsignaturasprofComponent implements OnInit, OnDestroy {
 
   public cursos: Curso[] = [];
 
+  public seelist: Boolean = false;
+
   constructor( private fb: FormBuilder,
                private cursosService: CursoService,
                private asigaturaService: AsignaturaService,
@@ -94,6 +96,20 @@ export class AsignaturasprofComponent implements OnInit, OnDestroy {
     pagina = (pagina < 0 ? 0 : pagina);
     this.registroactual = ((pagina - 1) * this.registrosporpagina >=0 ? (pagina - 1) * this.registrosporpagina : 0);
     this.cargarAsignaturas();
+  }
+
+  showlist(){
+    if (!this.seelist) {
+      this.seelist = true;
+      document.getElementById('lista-alumnos').style.display = 'block';
+    }else{
+      this.seelist = false;
+      document.getElementById('lista-alumnos').style.display = 'none';
+    }
+  }
+
+  selectAlu(){
+    
   }
 
 }

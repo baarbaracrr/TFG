@@ -16,3 +16,21 @@
 #content-targets {
     margin-top: 10%;
 }
+
+.btn-link {
+    color: #198754;
+}
+
+.addclass {
+    border-radius: 50%;
+    max-height: 18rem;
+    margin-top: 4%;
+}
+
+.addclass:hover {
+    cursor: pointer;
+}
+
+.addclass>img {
+    margin-top: 5%;
+}
