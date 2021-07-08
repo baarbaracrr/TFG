@@ -106,20 +106,23 @@
 <!-- ============================================================== -->
 
 <nav id="nav-prin" class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" [routerLink]="['/prof/alumnos']">
-        <img src="../../../assets/images/logo.png" alt="PostClass" class="logo">
-        <img src="../../../assets/images/text.png" alt="PostClass" class="logo">
+    <a class="navbar-brand d-flex" [routerLink]="['/prof/alumnos']" style="color: white; border-right: 0.1rem solid;">
+        <h4 class="mb-0 pt-3 mr-1 ml-1">2ºA 2020</h4>
+        <img src="../../../assets/images/logo.png" alt="PostClass" class="logo mr-3">
+        <!--<img src="../../../assets/images/text.png" alt="PostClass" class="logo">-->
     </a>
     <button id="burger" class="navbar-toggler animate__animated animate__bounceIn" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    </button>
+    <div class="collapse navbar-collapse row" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a id="nav-part1" class="nav-item nav-link section-nav" [routerLink]="['/prof/muro']">Muro <i class="fas fa-home"></i></a>
             <a id="nav-part2" class="nav-item nav-link section-nav" [routerLink]="['/prof/actividades']">Actividades <i class="fas fa-folder"></i></a>
             <a id="nav-part3" class="nav-item nav-link section-nav" [routerLink]="['/prof/mensajes']">Mensajería <i class="fas fa-comment"></i></a>
             <a id="nav-part4" class="nav-item nav-link section-nav" routerLink="/perfil">Perfil <i class="fas fa-user-circle"></i></a>
-            <a id="nav-part5" class="nav-item nav-link section-nav" href="#" (click)="logout()">Salir <i class="fa fa-power-off"></i></a>
+            <a id="nav-part5" class="nav-item nav-link section-nav d-lg-none d-block" href="#" (click)="logout()">Salir <i class="fa fa-power-off"></i></a>
         </div>
     </div>
+    <div class="text-end d-lg-block d-none"><a id="nav-part5" class="nav-item nav-link section-nav" href="#" (click)="logout()">Salir <i class="fa fa-power-off"></i></a></div>
+
 </nav>
